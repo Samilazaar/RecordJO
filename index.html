@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Légendes du Sprint</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5">
+        <button id="goButton" class="btn btn-success mb-4">Go</button>
+
+        <div class="text-center my-4">
+            <label for="decadeFilter" class="form-label">Filter by Decade:</label>
+            <select id="decadeFilter" class="form-select w-25 mx-auto">
+                <option value="all">All</option>
+                <option value="1930">1930s</option>
+                <option value="1990">1990s</option>
+                <option value="2000">2000s</option>
+                <option value="2010">2010s</option>
+            </select>
+        </div>
+        
+        <div class="text-center my-4">
+            <h1>Record Man 100 Mètres</h1>
+            <p>Découvrez les records du 100 mètres et les légendes qui les détiennent.</p>
+        </div>
+        
+        <div class="d-flex">
+            <!-- Circuit de course -->
+            <div class="race-wrapper flex-grow-1 me-4">
+                <div class="sprinter-names">
+                    <div class="name" id="name-bolt1">Usain Bolt</div>
+                    <div class="name" id="name-bolt2">Usain Bolt</div>
+                    <div class="name" id="name-blake">Yohan Blake</div>
+                    <div class="name" id="name-gay">Tyson Gay</div>
+                    <div class="name" id="name-powell">Asafa Powell</div>
+                    <div class="name" id="name-greene">Maurice Greene</div>
+                    <div class="name" id="name-lewis">Carl Lewis</div>
+                    <div class="name" id="name-owens">Jesse Owens</div>
+                </div>
+            
+                <div class="race-track">
+                    <div class="flag">
+                        <img src="drapeau.png" alt="Drapeau de départ">
+                    </div>
+                    <div class="sprinter" id="bolt1">
+                        <img src="usainbolt.jpeg" alt="Usain Bolt">
+                        <span class="time">9.58s</span>
+                    </div>
+                    <div class="sprinter" id="bolt2">
+                        <img src="usainbolt.jpeg" alt="Usain Bolt">
+                        <span class="time">9.69s</span>
+                    </div>
+                    <div class="sprinter" id="blake">
+                        <img src="yohanblake.jpeg" alt="Yohan Blake">
+                        <span class="time">9.69s</span>
+                    </div>
+                    <div class="sprinter" id="gay">
+                        <img src="tysongay.jpeg" alt="Tyson Gay">
+                        <span class="time">9.69s</span>
+                    </div>
+                    <div class="sprinter" id="powell">
+                        <img src="asafapowell.jpeg" alt="Asafa Powell">
+                        <span class="time">9.74s</span>
+                    </div>
+                    <div class="sprinter" id="greene">
+                        <img src="mauricegreen.jpeg" alt="Maurice Greene">
+                        <span class="time">9.79s</span>
+                    </div>
+                    <div class="sprinter" id="lewis">
+                        <img src="images.jpeg" alt="Carl Lewis">
+                        <span class="time">9.86s</span>
+                    </div>
+                    <div class="sprinter" id="owens">
+                        <img src="jesseowens.jpeg" alt="Jesse Owens">
+                        <span class="time">10.3s</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enregistrements des records -->
+            <div class="records-wrapper flex-shrink-0" style="width: 400px;">
+                <div id="records-section">
+                    <div id="timeline" class="my-5">
+                        <!-- Les enregistrements des records seront injectés ici par le JS -->
+                    </div>
+                </div>
+                <div id="olympics-timeline">
+                    <!-- Les enregistrements des vainqueurs des JO seront injectés ici -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Anecdotes Historiques -->
+        <div id="historical-anecdotes" class="my-5">
+            <h2 class="text-center">Anecdotes Historiques</h2>
+            <div id="anecdotes-list">
+                <!-- Les anecdotes seront injectées ici par le JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.race-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative; /* Ajouté pour la position relative */
+}
+
+.sprinter-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 20px; /* Espacement entre les noms et la piste */
+    position: absolute; /* Permet le positionnement précis */
+    top: 0;
+}
+
+.name {
+    height: 100px; /* Alignez avec la hauteur de chaque ligne */
+    text-align: right;
+    font-size: 0.9rem; /* Taille de police réduite */
+    font-weight: bold;
+    white-space: nowrap; /* Pour éviter le retour à la ligne */
+    display: flex;
+    align-items: center; /* Centrer verticalement les noms */
+}
+
+.race-track {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Réduit la hauteur totale pour plus de sprinters */
+    background: linear-gradient(90deg, #B22222 0%, #B22222 10%, #fff 10%, #fff 11%, #B22222 11%, #B22222 100%);
+    background-size: 150px 100%; /* Réduction de la taille des lignes */
+    overflow: hidden;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.race-track::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(to bottom, transparent, transparent 90px, white 90px, white 100px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sprinter {
+    position: absolute;
+    width: 80px; /* Taille réduite pour les sprinters */
+    text-align: center;
+    z-index: 2;
+    transform: translateX(0);
+    transition: transform 1s linear;
+}
+
+.sprinter img {
+    width: 30px; /* Taille réduite pour les images */
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.time {
+    display: block;
+    font-size: 0.9rem; /* Taille de police réduite */
+    font-weight: bold;
+}
+
+/* Positionnement des sprinters sur les lignes respectives */
+#bolt1, #name-bolt1 { top: 0; }
+#bolt2, #name-bolt2 { top: 100px; }
+#blake, #name-blake { top: 200px; }
+#gay, #name-gay { top: 300px; }
+#powell, #name-powell { top: 400px; }
+#greene, #name-greene { top: 500px; }
+#lewis, #name-lewis { top: 600px; }
+#owens, #name-owens { top: 700px; }
+
+.flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+}
+
+.flag img {
+    width: 100%;
+}
+
+#timeline {
+    text-align: left;
+}
+
+.record {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Réduction de l'espacement */
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.record img {
+    width: 80px; /* Taille des images réduite */
+    margin-right: 10px;
+}
+
+.record .info {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.record .year, .record .athlete, .record .time, .record .location {
+    font-size: 0.8rem; /* Taille de police réduite */
+    margin-bottom: 3px;
+}
+
+.record .location {
+    font-style: italic;
+}
+
+.summary {
+    display: none;
+    text-align: left;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px; /* Réduction du padding */
+    border-radius: 5px;
+}
+
+.summary.visible {
+    display: block;
+}
+
+.summary h2 {
+    margin-bottom: 10px;
+}
+
+.summary p {
+    font-size: 0.9rem; /* Taille de police réduite */
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+/* Styles pour les anecdotes historiques */
+#historical-anecdotes {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#anecdotes-list {
+    margin-top: 20px;
+}
+
+.anecdote {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.anecdote h3 {
+    margin-top: 0;
+}
+
+.anecdote p {
+    margin-bottom: 0;
+}
